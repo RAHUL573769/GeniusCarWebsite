@@ -6,7 +6,7 @@ const About = () => {
     <div>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row">
-          <div className="w-1/2 relative">
+          <div className="w-1/2 relative py-4">
             <img
               src={img1}
               className=" max-w-sm w-4/5 h-full rounded-lg shadow-2xl"
@@ -19,7 +19,7 @@ const About = () => {
             />
           </div>
           <div className="w-1/2">
-            <h1 className="text-5xl font-bold">About</h1>
+            <h1 className="text-5xl font-bold">About Us</h1>
             <p className="py-6">
               We Supply various inventories <br />
               Around the World
