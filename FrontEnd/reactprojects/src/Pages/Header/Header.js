@@ -4,7 +4,7 @@ import logo from "../../ImagesFolder/Wrench.svg";
 const Header = () => {
   const menuItems = (
     <>
-      <li>
+      <li className="font-semibold">
         <Link to="/">Home Page</Link>
       </li>
 
@@ -15,7 +15,7 @@ const Header = () => {
   );
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar h-20 bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
