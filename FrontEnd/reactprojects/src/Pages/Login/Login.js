@@ -7,11 +7,10 @@ const Login = () => {
     handleSubmit,
     formState: { errors }
   } = useForm();
-  const [data, setData] = useState("");
-  console.log(data);
+  const onSubmit = (data) => console.log(data);
   return (
     <div className=" h-[800px] flex justify-center items-center">
-      <form onSubmit={handleSubmit((data) => setData(JSON.stringify(data)))}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-control w-full max-w-xs">
           <label className="label">
             <span className="label-text">Email</span>
