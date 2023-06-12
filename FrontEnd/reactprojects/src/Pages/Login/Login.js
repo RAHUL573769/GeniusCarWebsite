@@ -1,14 +1,23 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
 
+import { GoogleAuthProvider } from "firebase/auth";
 const Login = () => {
+  const provider = new GoogleAuthProvider();
   const {
     register,
     handleSubmit,
     formState: { errors }
   } = useForm();
+  const { auth, signInWithGoogle } = useContext(AuthContext);
+
   const onSubmit = (data) => console.log(data);
+  const googleLogin = () => {
+    signInWithGoogle(auth, provider);
+  };
+
   return (
     <div>
       <div className=" h-[800px] flex justify-center items-center">
@@ -67,6 +76,7 @@ const Login = () => {
             <Link to="/signup">Sign Up Here</Link>
           </p>
         </form>
+        <button onClick={googleLogin}>Continue With Google</button>
       </div>
     </div>
   );
